@@ -19,9 +19,11 @@ func main() {
 
 	}
 
-	name := devices[13].Name
+	name := devices[0].Name
 
-	sniffing.SniffPackets(name, 1024, true, time.Hour)
+	fmt.Print(name)
+
+	sniffing.SniffPackets(name, 1024, true, time.Second*100)
 
 	if err != nil {
 
